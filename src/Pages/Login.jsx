@@ -9,7 +9,7 @@ const Register = () => {
           <input type="email" placeholder='mail' className='p-[15px]  border-b-[#A0C49D] border-b-[1px]' />
           <input type="password" placeholder='password' className='p-[15px]  border-b-[#A0C49D] border-b-[1px]'/>
           
-          <button className='bg-[#A0C49D] border-none cursor-pointer font-bold text-white p-2'>Sign Ip</button>
+          <button className='bg-[#A0C49D] border-none cursor-pointer font-bold text-white p-2'>Sign In</button>
         </form>
         <p className="text-[#A0C49D] mt-1 text-sm">You dont't have an account? Register</p>
       </div>
