@@ -34,14 +34,17 @@ const Register = () => {
               photoURL: downloadURL,
             });    
             //create user on firestore
-          const response= await axios.post(`https://chat2-6c353-default-rtdb.firebaseio.com/users/signIn.json`,{
-            uid:res.user.uid,
+           // change firestore rules to  'set allow: read, write: if request.auth != null' in firestore rules
+
+          await setDoc(doc(db, "users", res.user.uid), {
+            uid: res.user.uid,
             displayName,
             email,
-            photoURL:downloadURL
-           })
+            photoURL: downloadURL,
+          });
 
-           console.log(response);
+
+
 
             //create empty user chats on firestore
           } catch (err) {
