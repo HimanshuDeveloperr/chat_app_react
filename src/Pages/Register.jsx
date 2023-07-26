@@ -4,7 +4,7 @@ import { auth, db, storage } from "../firebase";
 import add from "../Assets/addAvatar.png";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Register = () => {
   const [err, setErr] = useState(false);
    const navigate=useNavigate()
@@ -101,7 +101,7 @@ const Register = () => {
           </button>
         </form>
         <p className="text-[#A0C49D] mt-1 text-sm">
-          You have an account? Login
+          You have an account? <Link to="/login">Login</Link>
         </p>
         {err && <span className="text-red-700">Something went wrong</span>}
       </div>
