@@ -30,6 +30,8 @@ const Login = () => {
           <button className='bg-[#A0C49D] border-none cursor-pointer font-bold text-white p-2'>Sign In</button>
         </form>
         <p className="text-[#A0C49D] mt-1 text-sm">You dont't have an account? <Link to="/register">Register</Link></p>
+        {err && <span className="text-red-700">Something went wrong</span>}
+
       </div>
     </div>
   );
